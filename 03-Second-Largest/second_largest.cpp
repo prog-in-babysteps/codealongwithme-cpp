@@ -17,8 +17,8 @@ int main() {
         cin >> num_list[i];
     }
 
-    // Compare first 2 numbers to get largest and second largest
     int largest_num, second_largest_num;
+    // Compare first 2 numbers to get largest and second largest
     if (num_list[0] > num_list[1]) {
         largest_num = num_list[0];
         second_largest_num = num_list[1];
@@ -26,7 +26,7 @@ int main() {
         largest_num = num_list[1];
         second_largest_num = num_list[0];
     }
-    for (int i = 2; i < num_list.size(); i++) {
+    for (int i = 2; i < num_list.size(); ++i) {
         if (num_list[i] > largest_num) {
             second_largest_num = largest_num;
             largest_num = num_list[i];
@@ -36,4 +36,5 @@ int main() {
     }
     cout << format("Largest Number is {}", largest_num) << endl;
     cout << format("Second Largest Number is {}", second_largest_num) << endl;
+    return 0;
 }

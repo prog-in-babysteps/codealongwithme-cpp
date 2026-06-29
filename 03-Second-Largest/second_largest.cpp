@@ -27,7 +27,8 @@ int main() {
         second_largest_num = num_list[0];
     }
     for (int i = 2; i < num_list.size(); ++i) {
-        if (num_list[i] > largest_num) {
+        // >= consume duplicate largest number if any
+        if (num_list[i] => largest_num) {
             second_largest_num = largest_num;
             largest_num = num_list[i];
         } else if (num_list[i] > second_largest_num) {
